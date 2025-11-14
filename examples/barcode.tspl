@@ -1,0 +1,7 @@
+SIZE 100 mm, 50 mm
+GAP 3 mm, 0 mm
+CLS
+TEXT 100,50,"3",0,1,1,"Product Barcode"
+BARCODE 100,100,"128",100,1,0,2,2,"123456789012"
+TEXT 100,250,"2",0,1,1,"Code 128 Barcode Example"
+PRINT 1,1

@@ -1,0 +1,7 @@
+SIZE 100 mm, 60 mm
+GAP 3 mm, 0 mm
+CLS
+TEXT 100,50,"4",0,1,1,"Scan QR Code"
+QRCODE 150,100,H,5,A,0,"https://github.com/tspl-simulator"
+TEXT 100,350,"3",0,1,1,"Visit our GitHub repository"
+PRINT 1,1

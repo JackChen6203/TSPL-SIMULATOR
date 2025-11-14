@@ -1,0 +1,10 @@
+SIZE 50 mm, 40 mm
+GAP 2 mm, 0 mm
+CLS
+TEXT 100,30,"3",0,1,1,"Premium Headphones"
+BAR 50,70,340,1
+TEXT 100,90,"2",0,1,1,"Model: HP-X3000"
+TEXT 100,120,"2",0,1,1,"Color: Black"
+TEXT 100,170,"4",0,3,3,"$79.99"
+BARCODE 100,260,"128",40,0,0,1,2,"8801234567890"
+PRINT 1,1

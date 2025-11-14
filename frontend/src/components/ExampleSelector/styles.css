@@ -1,0 +1,41 @@
+.example-selector {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.example-selector label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.example-selector select {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.example-selector select:hover {
+  border-color: #667eea;
+}
+
+.example-selector select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.example-selector select:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}

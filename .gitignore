@@ -1,0 +1,50 @@
+# Backend - Go
+backend/tspl-simulator
+backend/tspl-simulator.exe
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+go.work
+
+# Frontend - React
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Docker
+docker-compose.override.yml
+
+# Test coverage
+coverage/
+*.coverprofile
+
+# Temporary files
+tmp/
+temp/
+*.tmp

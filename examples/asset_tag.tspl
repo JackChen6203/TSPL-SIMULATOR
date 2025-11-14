@@ -1,0 +1,10 @@
+SIZE 50 mm, 30 mm
+GAP 2 mm, 0 mm
+CLS
+TEXT 100,30,"3",0,1,1,"ASSET TAG"
+BAR 50,60,340,1
+TEXT 100,80,"2",0,1,1,"Company Property"
+TEXT 100,110,"2",0,1,1,"Asset ID:"
+BARCODE 100,140,"128",50,0,0,1,2,"ASSET-2024-1234"
+TEXT 100,220,"1",0,1,1,"Do Not Remove"
+PRINT 1,1
