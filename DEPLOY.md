@@ -43,8 +43,7 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y nginx
 
 # 創建部署目錄
-sudo mkdir -p /opt/tspl-simulator
-sudo chown -R $USER:$USER /opt/tspl-simulator
+sudo mkdir -p /opt/tspl-simulator && sudo chown -R $USER:$USER /opt/tspl-simulator
 
 # 添加 GitHub Actions 部署公鑰
 mkdir -p ~/.ssh

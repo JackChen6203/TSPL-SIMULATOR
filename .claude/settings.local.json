@@ -21,7 +21,8 @@
       "Bash(powershell -Command \"New-Item -ItemType Directory -Force -Path .github\\workflows\")",
       "Bash(git remote set-url:*)",
       "Bash(ssh:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(go test:*)"
     ],
     "deny": [],
     "ask": []
