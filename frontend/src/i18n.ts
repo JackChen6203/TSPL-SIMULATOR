@@ -16,11 +16,13 @@ const resources = {
       language: '語言',
       
       // Editor & Controls
-      editor: '編輯器',
-      preview: '預覽',
+      editor: 'TSPL 編輯器',
+      editorPlaceholder: '在此輸入 TSPL 命令...\n\n範例:\nSIZE 100 mm, 50 mm\nGAP 3 mm, 0 mm\nCLS\nTEXT 100,100,"3",0,1,1,"Hello TSPL"\nPRINT 1,1',
+      preview: '標籤預覽',
       validate: '驗證',
       render: '渲染',
       clear: '清除',
+      rendering: '渲染中...',
       
       // Examples
       examples: '範例',
@@ -50,6 +52,7 @@ const resources = {
       
       // Messages
       enterTSPLCommand: '請輸入 TSPL 命令',
+      emptyPreview: '請輸入 TSPL 命令並點擊「預覽」按鈕',
       loadExamplesFailed: '載入範例失敗',
       renderFailed: '渲染失敗',
       syntaxValidationFailed: 'TSPL 語法驗證失敗',
@@ -77,11 +80,13 @@ const resources = {
       language: 'Language',
       
       // Editor & Controls
-      editor: 'Editor',
-      preview: 'Preview',
+      editor: 'TSPL Editor',
+      editorPlaceholder: 'Enter TSPL commands here...\n\nExample:\nSIZE 100 mm, 50 mm\nGAP 3 mm, 0 mm\nCLS\nTEXT 100,100,"3",0,1,1,"Hello TSPL"\nPRINT 1,1',
+      preview: 'Label Preview',
       validate: 'Validate',
       render: 'Render',
       clear: 'Clear',
+      rendering: 'Rendering...',
       
       // Examples
       examples: 'Examples',
@@ -111,6 +116,7 @@ const resources = {
       
       // Messages
       enterTSPLCommand: 'Please enter TSPL command',
+      emptyPreview: 'Please enter TSPL commands and click the "Preview" button',
       loadExamplesFailed: 'Failed to load examples',
       renderFailed: 'Render failed',
       syntaxValidationFailed: 'TSPL syntax validation failed',
@@ -138,11 +144,13 @@ const resources = {
       language: '言語',
       
       // Editor & Controls
-      editor: 'エディター',
-      preview: 'プレビュー',
+      editor: 'TSPL エディター',
+      editorPlaceholder: 'ここにTSPLコマンドを入力...\n\n例:\nSIZE 100 mm, 50 mm\nGAP 3 mm, 0 mm\nCLS\nTEXT 100,100,"3",0,1,1,"Hello TSPL"\nPRINT 1,1',
+      preview: 'ラベルプレビュー',
       validate: '検証',
       render: 'レンダリング',
       clear: 'クリア',
+      rendering: 'レンダリング中...',
       
       // Examples
       examples: '例',
@@ -172,6 +180,7 @@ const resources = {
       
       // Messages
       enterTSPLCommand: 'TSPLコマンドを入力してください',
+      emptyPreview: 'TSPLコマンドを入力して「プレビュー」ボタンをクリックしてください',
       loadExamplesFailed: '例の読み込みに失敗しました',
       renderFailed: 'レンダリングに失敗しました',
       syntaxValidationFailed: 'TSPL構文検証に失敗しました',
