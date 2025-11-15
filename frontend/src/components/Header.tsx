@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from '../../ThemeContext';
+import { useTheme } from '../ThemeContext';
 import { useTranslation } from 'react-i18next';
 import './Header.css';
 
