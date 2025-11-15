@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import SEO from './components/SEO';
+import Header from './components/Header';
 import TSPLEditor from './components/TSPLEditor';
 import LabelPreview from './components/LabelPreview';
 import ControlPanel from './components/ControlPanel';
@@ -8,8 +10,10 @@ import SyntaxChecker from './components/SyntaxChecker';
 import ValidationErrors from './components/ValidationErrors';
 import { RenderData } from './types/tspl';
 import { ValidationError } from './types/api';
+import { useTranslation } from 'react-i18next';
 
 const App: React.FC = () => {
+  const { t } = useTranslation();
   const [tsplCode, setTsplCode] = useState<string>('');
   const [renderData, setRenderData] = useState<RenderData | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -40,10 +44,8 @@ const App: React.FC = () => {
 
   return (
     <div className="app">
-      <header className="app-header">
-        <h1>TSPL Simulator</h1>
-        <p>模擬和預覽 TSPL 標籤列印效果</p>
-      </header>
+      <SEO />
+      <Header />
 
       <div className="app-container">
         <div className="left-panel">
@@ -70,7 +72,7 @@ const App: React.FC = () => {
 
           {error && validationErrors.length === 0 && (
             <div className="error-message">
-              <strong>錯誤:</strong> {error}
+              <strong>{t('error')}:</strong> {error}
             </div>
           )}
         </div>
