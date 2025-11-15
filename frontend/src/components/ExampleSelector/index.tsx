@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { getExamples } from '../../services/tsplApi';
 import { Example } from '../../types/api';
 import { useTranslation } from 'react-i18next';
@@ -13,11 +13,7 @@ const ExampleSelector: React.FC<ExampleSelectorProps> = ({ onSelectExample }) =>
   const [examples, setExamples] = useState<Example[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
-  useEffect(() => {
-    loadExamples();
-  }, []);
-
-  const loadExamples = async () => {
+  const loadExamples = useCallback(async () => {
     try {
       setLoading(true);
       const response = await getExamples();
@@ -27,7 +23,11 @@ const ExampleSelector: React.FC<ExampleSelectorProps> = ({ onSelectExample }) =>
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
+
+  useEffect(() => {
+    loadExamples();
+  }, [loadExamples]);
 
   const handleSelectExample = (code: string) => {
     onSelectExample(code);
