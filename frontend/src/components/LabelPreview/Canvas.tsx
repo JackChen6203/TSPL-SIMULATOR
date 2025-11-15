@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useCallback } from 'react';
 import { RenderData, RenderElement } from '../../types/tspl';
 
 interface CanvasProps {
@@ -44,6 +44,7 @@ const Canvas: React.FC<CanvasProps> = ({ renderData }) => {
     renderData.elements.forEach((element) => {
       drawElement(ctx, element);
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [renderData]);
 
   const drawElement = (ctx: CanvasRenderingContext2D, element: RenderElement) => {
