@@ -19,7 +19,6 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   const { t } = useTranslation();
   
-  const siteTitle = title || t('title');
   const siteDescription = description || t('subtitle');
   const fullTitle = title ? `${title} | TSPL Simulator` : 'TSPL Simulator - 標籤列印模擬器';
 
