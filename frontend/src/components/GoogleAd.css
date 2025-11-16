@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  width: 100%;
 }
 
 /* 頂部橫幅廣告 */
@@ -26,7 +27,7 @@
 /* 確保廣告可見性 */
 .adsbygoogle {
   display: block !important;
-  min-width: 200px;
+  width: 100%;
   min-height: 50px;
 }
 
@@ -41,13 +42,18 @@
     margin: 1rem 0;
     padding: 0.5rem;
   }
-  
+
   .google-ad-top {
     min-height: 50px;
   }
-  
+
+  /* 在平板和手機上隱藏側邊欄廣告，避免寬度問題 */
   .google-ad-sidebar {
-    min-height: 100px;
+    display: none;
+  }
+
+  .adsbygoogle {
+    min-width: 100%;
   }
 }
 
