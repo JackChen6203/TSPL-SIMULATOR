@@ -32,6 +32,9 @@
   color: #333;
   cursor: pointer;
   transition: border-color 0.2s;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 [data-theme="dark"] .example-selector select {
@@ -84,13 +87,20 @@
     align-items: stretch;
     gap: 0.5rem;
   }
-  
+
   .example-selector label {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
+    text-align: left;
   }
-  
+
   .example-selector select {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
+    padding: 0.625rem 0.5rem;
+    width: 100%;
+  }
+
+  .example-selector select option {
+    font-size: 0.875rem;
     padding: 0.5rem;
   }
 }
@@ -100,13 +110,18 @@
   .example-selector {
     padding: 0.4rem 0.5rem;
   }
-  
+
   .example-selector label {
     font-size: 0.8rem;
   }
-  
+
   .example-selector select {
     font-size: 0.8rem;
-    padding: 0.4rem;
+    padding: 0.5rem 0.4rem;
+    width: 100%;
+  }
+
+  .example-selector select option {
+    font-size: 0.8rem;
   }
 }
