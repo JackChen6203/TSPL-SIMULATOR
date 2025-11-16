@@ -8,6 +8,10 @@
   height: 100%;
 }
 
+[data-theme="dark"] .label-preview {
+  background: var(--bg-secondary);
+}
+
 .preview-header {
   background: #f8f9fa;
   padding: 1rem 1.5rem;
@@ -15,6 +19,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+[data-theme="dark"] .preview-header {
+  background: #2a2a2a;
+  border-bottom-color: var(--border-color);
 }
 
 .preview-header h3 {
@@ -23,9 +34,17 @@
   color: #333;
 }
 
+[data-theme="dark"] .preview-header h3 {
+  color: var(--text-primary);
+}
+
 .preview-info {
   font-size: 0.9rem;
   color: #666;
+}
+
+[data-theme="dark"] .preview-info {
+  color: var(--text-secondary);
 }
 
 .preview-content {
@@ -36,16 +55,30 @@
   padding: 2rem;
   background: #fafafa;
   overflow: auto;
+  min-height: 300px;
+}
+
+[data-theme="dark"] .preview-content {
+  background: #1a1a1a;
 }
 
 .preview-empty {
   text-align: center;
   color: #999;
+  padding: 1rem;
+}
+
+[data-theme="dark"] .preview-empty {
+  color: var(--text-secondary);
 }
 
 .preview-loading {
   text-align: center;
   color: #666;
+}
+
+[data-theme="dark"] .preview-loading {
+  color: var(--text-secondary);
 }
 
 .spinner {
@@ -58,6 +91,11 @@
   margin: 0 auto 1rem;
 }
 
+[data-theme="dark"] .spinner {
+  border-color: #333;
+  border-top-color: #667eea;
+}
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
@@ -67,6 +105,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 .label-canvas {
@@ -74,4 +114,90 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   max-width: 100%;
   height: auto;
+  display: block;
+}
+
+[data-theme="dark"] .label-canvas {
+  border-color: var(--border-color);
+}
+
+/* 平板樣式 */
+@media (max-width: 768px) {
+  .preview-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .preview-header h3 {
+    font-size: 1rem;
+  }
+  
+  .preview-info {
+    font-size: 0.85rem;
+  }
+  
+  .preview-content {
+    padding: 1rem;
+    min-height: 250px;
+  }
+  
+  .spinner {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+/* 手機樣式 */
+@media (max-width: 480px) {
+  .label-preview {
+    border-radius: 4px;
+  }
+  
+  .preview-header {
+    padding: 0.5rem 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .preview-header h3 {
+    font-size: 0.9rem;
+  }
+  
+  .preview-info {
+    font-size: 0.8rem;
+  }
+  
+  .preview-content {
+    padding: 0.75rem;
+    min-height: 200px;
+  }
+  
+  .preview-empty p {
+    font-size: 0.85rem;
+  }
+  
+  .spinner {
+    width: 30px;
+    height: 30px;
+    border-width: 2px;
+  }
+  
+  .canvas-container {
+    overflow-x: auto;
+  }
+  
+  .label-canvas {
+    max-width: calc(100vw - 2rem);
+  }
+}
+
+/* 極小手機 */
+@media (max-width: 360px) {
+  .preview-content {
+    padding: 0.5rem;
+    min-height: 180px;
+  }
+  
+  .preview-empty p {
+    font-size: 0.8rem;
+  }
 }

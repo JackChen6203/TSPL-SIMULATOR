@@ -42,3 +42,37 @@
 .btn-secondary:hover {
   background: #5a6268;
 }
+
+/* 平板樣式 */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* 手機樣式 */
+@media (max-width: 480px) {
+  .control-panel {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+  
+  .btn {
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+}
+
+/* 極小手機 */
+@media (max-width: 360px) {
+  .btn {
+    padding: 0.6rem 0.75rem;
+    font-size: 0.8rem;
+  }
+}

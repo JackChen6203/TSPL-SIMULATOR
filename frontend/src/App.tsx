@@ -110,7 +110,7 @@ const App: React.FC = () => {
       {/* 頁尾資訊 - Google Ads 要求 */}
       <footer className="app-footer">
         <div className="footer-content">
-          <p>© 2025 TSPL Simulator. {t('madeWith')} ❤️</p>
+          <p>© 2025 TSPL Simulator. {t('madeWith')} Davis Chen</p>
           <div className="footer-links">
             <a href="/privacy">Privacy Policy</a>
             <span>|</span>

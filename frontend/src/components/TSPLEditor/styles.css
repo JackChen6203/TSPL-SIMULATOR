@@ -8,16 +8,29 @@
   flex: 1;
 }
 
+[data-theme="dark"] .tspl-editor {
+  background: var(--bg-secondary);
+}
+
 .editor-header {
   background: #f8f9fa;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #e9ecef;
 }
 
+[data-theme="dark"] .editor-header {
+  background: #2a2a2a;
+  border-bottom-color: var(--border-color);
+}
+
 .editor-header h3 {
   margin: 0;
   font-size: 1.1rem;
   color: #333;
+}
+
+[data-theme="dark"] .editor-header h3 {
+  color: var(--text-primary);
 }
 
 .editor-textarea {
@@ -30,8 +43,66 @@
   line-height: 1.6;
   resize: vertical;
   outline: none;
+  background: white;
+  color: #333;
+}
+
+[data-theme="dark"] .editor-textarea {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
 }
 
 .editor-textarea::placeholder {
   color: #999;
+}
+
+[data-theme="dark"] .editor-textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+/* 平板樣式 */
+@media (max-width: 768px) {
+  .editor-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .editor-header h3 {
+    font-size: 1rem;
+  }
+  
+  .editor-textarea {
+    min-height: 300px;
+    font-size: 13px;
+    padding: 0.75rem;
+  }
+}
+
+/* 手機樣式 */
+@media (max-width: 480px) {
+  .tspl-editor {
+    border-radius: 4px;
+  }
+  
+  .editor-header {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .editor-header h3 {
+    font-size: 0.9rem;
+  }
+  
+  .editor-textarea {
+    min-height: 250px;
+    font-size: 12px;
+    padding: 0.5rem;
+    line-height: 1.4;
+  }
+}
+
+/* 極小手機 */
+@media (max-width: 360px) {
+  .editor-textarea {
+    min-height: 200px;
+    font-size: 11px;
+  }
 }
