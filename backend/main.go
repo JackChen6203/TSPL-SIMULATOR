@@ -45,10 +45,10 @@ func main() {
 	// 設定路由
 	router := api.SetupRouter()
 
-	// 啟動服務器
-	serverAddr := fmt.Sprintf(":%s", cfg.ServerPort)
+	// 啟動服務器 - 綁定到 0.0.0.0 確保可從外部訪問
+	serverAddr := fmt.Sprintf("0.0.0.0:%s", cfg.ServerPort)
 	log.Printf("TSPL Simulator 服務器啟動於 %s", serverAddr)
-	log.Printf("API 端點: http://localhost%s/api", serverAddr)
+	log.Printf("API 端點: http://localhost:%s/api", cfg.ServerPort)
 	log.Printf("API 資料儲存: %s", filepath.Join(storagePath, "API_print"))
 	log.Printf("MQTT 資料儲存: %s", filepath.Join(storagePath, "MQTT_print"))
 
