@@ -49,9 +49,10 @@ const App: React.FC = () => {
       <Header />
 
       {/* 頂部橫幅廣告 - Google Ads 合規 */}
-      <GoogleAd 
-        slot="1234567890" 
-        format="horizontal" 
+      {/* TODO: 在 AdSense 後台創建廣告單元後,替換下方的 slot ID */}
+      <GoogleAd
+        slot="1234567890" // 替換為真實的 Ad Slot ID (例如: "9876543210")
+        format="horizontal"
         className="google-ad-top"
       />
 
@@ -85,9 +86,9 @@ const App: React.FC = () => {
           )}
 
           {/* 左側邊欄廣告 */}
-          <GoogleAd 
-            slot="0987654321" 
-            format="rectangle" 
+          <GoogleAd
+            slot="0987654321" // 替換為真實的 Ad Slot ID
+            format="rectangle"
             className="google-ad-sidebar"
           />
         </div>
@@ -99,9 +100,9 @@ const App: React.FC = () => {
           />
 
           {/* 右側邊欄廣告 */}
-          <GoogleAd 
-            slot="1122334455" 
-            format="rectangle" 
+          <GoogleAd
+            slot="1122334455" // 替換為真實的 Ad Slot ID
+            format="rectangle"
             className="google-ad-sidebar"
           />
         </div>
@@ -112,11 +113,11 @@ const App: React.FC = () => {
         <div className="footer-content">
           <p>© 2025 TSPL Simulator. {t('madeWith')} Davis Chen</p>
           <div className="footer-links">
-            <a href="/privacy">Privacy Policy</a>
+            <a href="/privacy.html">Privacy Policy</a>
             <span>|</span>
-            <a href="/terms">Terms of Service</a>
+            <a href="/terms.html">Terms of Service</a>
             <span>|</span>
-            <a href="/contact">Contact</a>
+            <a href="/contact.html">Contact</a>
           </div>
         </div>
       </footer>
